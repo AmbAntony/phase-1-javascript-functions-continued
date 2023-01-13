@@ -1,33 +1,28 @@
-//   code your solution here        
-function saturdayFun(target="roller-skate"){
-    console.log(`This Saturday, I want to ${target}`)
-}
+//   code your solution here   
 
+function saturdayFun(activity="roller-skate") {
 
-saturdayFun()
+    return `This Saturday, I want to ${activity}!`;
 
-function mondayWork(space="go to the airport"){
-    console.log(`This Monday I will ${space}`);
-}
-mondayWork("go to the office")
+  }
+  
+  // defines mondayWork function expression as specified 
 
+  let mondayWork = function(activity="go to the office") {
 
+    return `This Monday, I will ${activity}.`;
+  }
+  
+  //defines wrapAdjective function according to the specification
 
-function outerScope(greeting, msg="it's a good day to be good"){
-    const innerScope = function(name, lang = "python"){
-     return `$(greeting), $(name)! $(msg) $(lang)`;
+  
+  let wrapAdjective = function(style="*") {
+
+    return function(adjective="special") {
+
+      return `You are ${style}${adjective}${style}!`;
+
     }
-
-    return innerScope("student","JS");
-}
-
-outerScope();
-
-
-function wrapAdjective(name, adjective="special"){
-    return `You are $(adjective)`
-
-}
-
-wrapAdjective("%")("a dedicated programmer")
+    
+  }
 
